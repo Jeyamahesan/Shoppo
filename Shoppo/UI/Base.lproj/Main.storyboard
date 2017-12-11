@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Category View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CategoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FVR-MU-V3X"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wi0-N8-tZX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aiE-Km-FXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="FS8-hA-qFe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Shoppo" id="i0c-aJ-9cR"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9DR-1c-b0W">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5TT-gE-caa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7Uf-Zh-r5U"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FS8-hA-qFe" firstAttribute="leading" secondItem="aiE-Km-FXQ" secondAttribute="leading" id="18r-bn-D0x"/>
+                            <constraint firstItem="FS8-hA-qFe" firstAttribute="top" secondItem="FVR-MU-V3X" secondAttribute="bottom" id="F8q-w7-YvE"/>
+                            <constraint firstItem="FS8-hA-qFe" firstAttribute="leading" secondItem="9DR-1c-b0W" secondAttribute="leading" id="J5K-dg-hfa"/>
+                            <constraint firstItem="9DR-1c-b0W" firstAttribute="top" secondItem="FS8-hA-qFe" secondAttribute="bottom" id="JNG-xO-zH0"/>
+                            <constraint firstAttribute="trailing" secondItem="FS8-hA-qFe" secondAttribute="trailing" id="R3D-z3-NsI"/>
+                            <constraint firstItem="FS8-hA-qFe" firstAttribute="trailing" secondItem="9DR-1c-b0W" secondAttribute="trailing" id="aZL-4Q-gMi"/>
+                            <constraint firstItem="9DR-1c-b0W" firstAttribute="bottom" secondItem="Wi0-N8-tZX" secondAttribute="top" id="zjC-OX-V9Z"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="categoriesTableView" destination="9DR-1c-b0W" id="13y-ZW-Yug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>

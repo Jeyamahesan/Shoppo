@@ -1,0 +1,6 @@
+framework module Pods_Shoppo {
+  umbrella header "Pods-Shoppo-umbrella.h"
+
+  export *
+  module * { export * }
+}
