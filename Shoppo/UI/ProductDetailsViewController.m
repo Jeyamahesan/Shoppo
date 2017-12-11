@@ -107,7 +107,7 @@ static NSInteger ScrollingImageViewHeight = 65;
         for (NSString *imageUrl in self.images) {
             UIImageView *smallImage = [[UIImageView alloc] initWithFrame:CGRectMake((i * ScrollingImageViewHeight), 0, imagesScrollViewHeightConstraint.constant, imagesScrollViewHeightConstraint.constant)];
             smallImage.userInteractionEnabled = YES;
-            smallImage.tag = ScrollingImageViewTag; // tag t know which ImageViews to remove from "imagesScrollView"
+            smallImage.tag = ScrollingImageViewTag;
             [smallImage sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
             
             [imagesScrollView addSubview:smallImage];
